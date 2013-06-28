@@ -15,9 +15,9 @@ function! s:GitGrep(cmd, args)
     silent execute a:cmd . " " . l:grepargs
 
     if a:cmd =~# '^l'
-      topleft lopen
+      botright lopen
     else
-      topleft copen
+      botright copen
     endif
 
     exec "nnoremap <silent> <buffer> q :ccl<CR>"
